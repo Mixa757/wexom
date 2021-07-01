@@ -1,0 +1,163 @@
+.videopresent {
+	min-width: 100%;
+	
+}
+
+.videopresent__wrapper {
+	position: relative;
+	overflow: hidden;
+	min-height: 315px;
+	padding: 0 0 -80% 0;
+	
+
+
+	iframe,
+	video {
+		width: 100%;
+		height: 100%;
+		
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		object-fit: cover;
+	}
+}
+
+.block__prev {
+	position: relative;
+	display: block;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	min-height: 320px;
+
+	img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: block;
+		object-fit: cover;
+	}
+	
+}
+
+
+
+.block__prevcenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	margin: 0 auto;
+	max-width: 550px;
+	z-index: 3;
+
+	.block__prevlink {
+		display: block;
+		min-height: 100px;
+		max-width: 100px;
+		border-radius: 50%;
+		margin: 0 auto;
+		position: relative;
+		top: 0;
+		left: 0;
+		@include adaptiv-value('margin-bottom', 44, 12, 0);
+		transition: all .3s ease;
+		
+
+		@media (max-width: 900px) {
+			transform: scale(.7);
+		}
+
+		@media (max-width: 700px) {
+			transform: scale(.4);
+		}
+
+		svg {
+			display: block;
+			position: relative;
+			top: 0;
+			left: 15%;
+
+			transform: translateY(20%);
+			// transition: all .3s ease;
+		}
+
+		&:hover svg {
+			fill: #1217D7;
+			transition: all .3s ease;
+		}
+
+
+
+		&:before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			content: '';
+			display: block;
+			width: 100px;
+			height: 100px;
+			border-radius: 100%;
+			background-color: rgba(#000, 0.2);
+			transition: all .3s ease;
+		}
+
+
+
+		&:hover {
+			transform:  scale(1.05);
+			transition: all .3s ease;
+		}
+
+		&:hover:before {
+			background-color: rgba(#000, 0.8);
+			transition: all .3s ease;
+
+		}
+	}
+	
+}
+
+
+.title__prev {
+	font-family: $raleway;
+	@include adaptiv-value('font-size', 30, 16, 0);
+	line-height: 1.2;
+	font-weight: $fw-medium;
+	color: $white;
+	font-weight: $fw-medium;
+	@include adaptiv-value('margin-bottom', 30, 10, 0);
+
+
+}
+
+.block__time {
+	text-align: center;
+	font-family: $montserrat;
+	@include adaptiv-value('font-size', 14, 10, 0);
+	line-height: 1.2;
+	font-weight: $fw-regular;
+	color: $brown-text;
+
+	
+}
+
+.paragr__prev {
+	color: $white;
+	max-height: 70px;
+	overflow: auto;
+
+	@media (max-width: 800px) {
+		line-height: 1.4;
+	}
+}
+
+.paragr__prev::-webkit-scrollbar {
+	width: 0px;
+}

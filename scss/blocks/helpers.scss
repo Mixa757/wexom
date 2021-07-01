@@ -1,0 +1,39 @@
+.text-c {
+	display: block;
+	margin: 0 auto;
+}
+
+.mt {
+	margin-top: 10px;
+}
+
+.mb80 {
+	@include adaptiv-value('margin-bottom', 80, 40, 0);
+}
+
+.hide {
+	display: none;
+}
+
+.lh {
+	line-height: 1.42;
+	
+}
+
+.after {
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color:  #252525;	
+		margin-top: 20px;
+	}
+}
+
+.brown {
+	background-color: $brown-btn;
+	border-radius: 3px;
+	color: $white;
+	transition: all .3s ease;
+}

@@ -1,0 +1,167 @@
+.realization {
+	background-color: #fbfaf8;
+}
+
+.realization__block {
+	margin: 0 auto;
+	max-width: 750px;
+	@include adaptiv-value('padding-top', 80, 40, 0);
+}
+
+.realization__title {
+	font-family: $raleway;
+	@include adaptiv-value('font-size', 30, 20, 0);
+	@include adaptiv-value('margin-bottom', 25, 15, 0);
+	line-height: 1.75;
+	font-weight: $fw-semi-bold;
+	color: $grey;
+	text-align: center;
+
+}
+
+.realization__paragr {
+	font-family: $montserrat;
+	@include adaptiv-value('font-size', 16, 12, 0);
+	@include adaptiv-value('margin-bottom', 40, 20, 0);
+	line-height: 2.2;
+	font-weight: $fw-light;
+	color: $some-text;
+	text-align: center;
+
+
+
+	&--about {
+		color: $grey;
+		text-align: left;
+		margin-top: 0;
+		@include adaptiv-value('margin-bottom', 33, 18, 0);
+		
+		a {
+			text-decoration: none;
+		}
+		
+
+		.span {
+			color: #959595;
+
+		}
+
+		span {
+			color: #00bff3;
+		}
+	}
+}
+
+.realization__browsers {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// text-align: center;
+	overflow: hidden;
+}
+
+.swiper-container {
+     width: 100%;
+     height: 100%;
+     padding-top: 50px;
+     // padding-bottom: 50px;
+}
+
+.swiper-slide {
+	position: relative;
+	 background-position: center;
+	 background-size: cover;
+	 width: 80%;
+	 height: 100%;
+
+	 .testimonialBox img {
+	 	display: block;
+	 	width: 100%;
+	 	height: 100%;
+	 	object-fit: cover;
+	 }
+
+}
+
+
+.swiper-wrapper {
+	// transform: translate3d(0px, 141px, -200px);
+}
+
+// .swiper-slide .swiper-slide-prev {
+// 	position: absolute;
+// 	bottom: 0;
+// 	left: 0;
+// }
+
+.swiper-slide .swiper-slide-next {
+
+}
+
+
+.realization__footer {
+	position: relative;
+	z-index: 4;
+	@include adaptiv-value('padding-top', 50, 30, 0);
+	@include adaptiv-value('padding-bottom', 50, 30, 0);
+	background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
+}
+
+.realization__wordpress {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	@media (max-width: 530px) {
+		 flex-direction: column;
+	}
+}
+
+
+@media (max-width: 700px)  {
+	.realization__paragr {
+		line-height: 1.6;
+	}
+}
+
+
+@media (max-width: 530px) {
+	.realization__wordpress {
+		flex-direction: column;
+	}
+
+	.realization__left {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+
+
+}
+
+
+
+.realization__text {
+
+	color: $white;
+	font-family: $raleway;
+	@include adaptiv-value('font-size', 28, 18, 0);
+	line-height: 1.2;
+	font-weight: $fw-regular;
+
+	span {
+		font-family: $raleway;
+		@include adaptiv-value('font-size', 28, 18, 0);
+		line-height: 1.2;
+		font-weight: $fw-regular;
+		color: $brown-text;
+	}
+}
+
+.realization__subtext {
+	font-family: $montserrat;
+	@include adaptiv-value('font-size', 18, 12, 0);
+	line-height: 1.2;
+	font-weight: $fw-light;
+	color: #615855;
+}

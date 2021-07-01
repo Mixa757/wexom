@@ -1,0 +1,86 @@
+.posts {
+	background-color: $white;
+	@include adaptiv-value('padding-bottom', 80, 40, 0);
+}
+
+.project__item--posts {
+	margin: 0 auto;
+}
+
+.project__read {
+	display: block;
+	max-width: 100px;
+	position: relative;
+	font-family: $montserrat;
+	@include adaptiv-value('font-size', 14, 10, 0);
+	line-height: 1.4;
+	font-weight: $fw-light;
+	color: $brown-text;
+	text-decoration: none;
+	cursor: pointer;
+	background: url('../../image/posts/arrow.svg') 80px 4px no-repeat;
+	
+
+	&--about {
+		color: $white-text;
+	}
+
+ 	&:hover {
+
+ 		text-decoration: underline;
+
+ 	}
+}
+
+.project__col--posts .slick-track {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.project__col--posts .slick-list {
+	overflow: hidden;
+}
+
+.project__col--posts {
+	position: relative;
+	@include adaptiv-value('margin-bottom', 40, 30, 0);
+}
+
+.project__col--posts .slick-arrow {
+	position: absolute;
+	bottom: -40px;
+	left: 50%;
+	transform: translate(-50%);
+	z-index: 10;
+	font-size: 0;
+	width: 22px;
+	height: 22px;
+	outline: none;
+	cursor: pointer;
+}
+
+
+.project__col--posts .slick-arrow.slick-prev {
+	left: 49%;
+	transform: translate(-49%);
+	background: url('../../image/posts/left.svg') 0 0  / 100% no-repeat;
+
+	&:hover {
+		background: url('../../image/posts/leftHover.svg') 0 0  / 100% no-repeat;
+		transition: all .3s ease;
+	}
+}	
+
+
+.project__col--posts .slick-arrow.slick-next {
+	right: 49%;
+	transform: translate(49%);
+	background: url('../../image/posts/right.svg') 0 0  / 100% no-repeat;
+
+	&:hover {
+		background: url('../../image/posts/rightHover.svg') 0 0  / 100% no-repeat;
+		transition: all .3s ease;
+	}
+}

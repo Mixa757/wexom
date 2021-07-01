@@ -1,0 +1,108 @@
+.services {
+
+}
+
+.services__row {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 -10px;
+}
+
+@media (max-width: 700px) {
+	.services__row {
+		justify-content: center;
+	    flex-wrap: wrap;
+	}
+}
+
+
+.pad {
+	@include adaptiv-value('padding-top', 80, 40, 0);
+	@include adaptiv-value('padding-bottom', 80, 40, 0);
+}
+
+.services__item {
+	display: flex;
+	flex-direction: column;
+	padding: 0 10px;
+	text-align: center;
+	flex: 0 1 25%;
+	cursor: pointer;
+	transition: all .3s ease;
+
+	&:hover:after {
+		background-color: $brown-text;
+		transition: all .3s ease;
+	}
+
+	&:hover .services__img svg{
+	
+		fill: $brown-text;
+		transition: all .1s ease;
+	}
+
+	&:hover .services__title {
+		color: $brown-text;
+		transition: all .3s ease;
+	}
+
+
+	&:after {
+		content: '';
+		display: block;
+		width: 70px;
+		height: 3px;
+		background-color: #f1eee9;
+		transition: all .5s ease;
+		margin: 0 auto;
+	}
+
+	.services__img {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 30px;	
+	}
+}
+
+@media (max-width: 700px) {
+	.services__item {
+		flex-wrap: wrap;
+
+	    flex-basis: 50%;
+	    margin-bottom: 40px;
+
+	    .services__img {
+   			 margin-bottom: 10px;
+	    }
+	}
+}
+
+.services__title  {
+	font-family: $raleway;
+	@include adaptiv-value('font-size', 22, 16, 0);
+	line-height: 1.2;
+	font-weight: $fw-semi-bold;
+	color: $grey;
+	margin-bottom: 20px;
+}
+
+
+@media (max-width: 700px) {
+	.services__title {
+		margin-bottom: 6px;
+	}
+}
+
+
+.services__paragr {
+	font-family: $montserrat;
+	@include adaptiv-value('font-size', 14, 10, 0);
+	line-height: 1.8;
+	font-weight: $fw-light;
+	color: $some-text;
+	text-align: center;
+	margin-bottom: 30px;
+	flex: 1 1 auto;
+}
+
+

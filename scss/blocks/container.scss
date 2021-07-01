@@ -1,0 +1,18 @@
+.container {
+	max-width: $maxWidthContainerGlav;
+
+	margin: 0 auto;
+	@include adaptiv-value('padding-left', 30, 10, 0);
+	@include adaptiv-value('padding-right', 30, 10, 0);
+
+	&--partners {
+		// position: relative;
+		max-width: 1115px;
+			
+	}
+}
+
+.container__realization {
+	max-width: 1235px;
+}
+
